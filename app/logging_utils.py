@@ -34,4 +34,18 @@ def log_event(event: str, level: str = "info", **fields) -> str:
         >>> log_event("ask_completed", user_id="sv01", cost_usd=0.0001)
         '{"event": "ask_completed", "level": "info", "timestamp": "...", ...}'
     """
-    raise NotImplementedError("TODO (CP1): cài đặt log_event")
+    log_data = {
+        "event": event,
+        "level": level.lower(),
+        "timestamp": utc_now_iso()
+    }
+    # Gộp thêm tất cả các trường tùy chỉnh từ **fields
+    log_data.update(fields)
+
+    # 3. Serialized dict thành chuỗi JSON trên 1 dòng
+    log_json = json.dumps(log_data, ensure_ascii=False)
+
+    print(log_json, flush=True)
+
+    return log_json
+
