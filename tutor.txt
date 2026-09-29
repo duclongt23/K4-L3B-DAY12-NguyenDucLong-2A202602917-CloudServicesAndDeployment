@@ -1,0 +1,10 @@
+Giai đoạn	Thời gian	Trọng tâm	Điểm
+CP0	Start +0–20 phút	Setup, repo và baseline	—
+CP1	Start +20–60 phút	12-Factor config, health và logging	15
+CP2	Start +60–105 phút	Docker production-ready	15
+Giải lao	Start +105–115 phút	Nghỉ 10 phút	—
+CP3	Start +115–160 phút	Authentication, rate limit, cost guard	20
+CP4	Start +160–200 phút	Stateless, probes, graceful shutdown	20
+CP5	Start +200–230 phút	Cloud deployment	15
+Wrap-up	Start +230–240 phút	Exercises, grade và nộp bài	15
+
